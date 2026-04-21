@@ -26,6 +26,7 @@ export function HeroClient({ buildTimeHolidayId }: HeroClientProps) {
     const badgeEl = document.querySelector<HTMLElement>("#hero-holiday-badge")
     const headlineEl = document.querySelector<HTMLElement>("#hero-title")
     const subheadlineEl = document.querySelector<HTMLElement>("#hero-subheadline")
+    const imageLabelEl = document.querySelector<HTMLElement>("#hero-image-label")
     const ctaEls = Array.from(
       document.querySelectorAll<HTMLAnchorElement>("a[href^='https://wa.me/']"),
     )
@@ -36,6 +37,7 @@ export function HeroClient({ buildTimeHolidayId }: HeroClientProps) {
     }
     if (headlineEl) headlineEl.textContent = hero.headlineEs
     if (subheadlineEl) subheadlineEl.textContent = hero.subheadlineEs
+    if (imageLabelEl) imageLabelEl.textContent = hero.headlineEs
     for (const ctaEl of ctaEls) {
       ctaEl.href = waLink(hero.whatsappMessage)
     }

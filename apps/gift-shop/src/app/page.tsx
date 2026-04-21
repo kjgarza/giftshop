@@ -148,8 +148,8 @@ export default function HomePage() {
                   Promo de temporada
                 </div>
                 <div className="absolute bottom-4 right-4 max-w-[18rem] rotate-[3deg] rounded-[1.2rem] border-[2px] border-[color:var(--line)] bg-[color:var(--card-pink)] px-4 py-3 shadow-[5px_5px_0_var(--shadow-soft)]">
-                  <div className="font-script text-2xl text-[color:var(--accent-strong)]">{homeContent.hero.locale}</div>
-                  <div className="mt-1 text-xs font-black uppercase tracking-[0.18em]">campaña automática por temporada</div>
+                  <div id="hero-image-label" className="font-script text-2xl text-[color:var(--accent-strong)]">{hero.headlineEs}</div>
+                  <div className="mt-1 text-xs font-black uppercase tracking-[0.18em]"></div>
                 </div>
               </div>
             </div>

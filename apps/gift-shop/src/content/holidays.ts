@@ -70,11 +70,24 @@ export const holidays: Holiday[] = [
     window: (year) => windowBefore(year, 1, 6),
   },
   {
+    id: "valentin",
+    nameEs: "San Valentín",
+    nameEn: "Valentine's Day",
+    type: "major",
+    image: "/hero/valentin.png",
+    headlineEs: "Detalles bonitos para San Valentín",
+    subheadlineEs:
+      "Tarjetas, moños, papel bonito y regalitos para sorprender el 14 de febrero.",
+    whatsappMessage:
+      "¡Hola! Estoy buscando un detalle bonito para San Valentín. ¿Qué me recomiendan?",
+    window: (year) => windowBefore(year, 2, 14),
+  },
+  {
     id: "nino",
     nameEs: "Día del Niño",
     nameEn: "Children's Day",
     type: "common",
-    image: "/hero/nino.svg",
+    image: "/hero/nino.png",
     headlineEs: "Sorpresas para el Día del Niño",
     subheadlineEs:
       "Papelería divertida, envolturas con confeti y detalles que emocionan.",
