@@ -41,7 +41,7 @@ export const homeContent = {
   ],
   hero: {
     eyebrow: "bazar de papelitos bonitos",
-    locale: "Ciudad de México • alma de mercado • tienda en línea",
+    locale: "Monterrey, N.L. • alma de mercado • tienda en línea",
     scriptLead: "brillitos, listones y mini tesoros",
     titleMain: "Gift",
     titleAccent: "Shop",
