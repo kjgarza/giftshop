@@ -287,7 +287,6 @@ export default function HomePage() {
         </section>
 
         <section
-          id="newsletter"
           data-reveal
           className="reveal-section mx-auto mt-18 w-full max-w-[1440px] px-4 sm:px-6 lg:px-8"
         >
@@ -348,7 +347,7 @@ export default function HomePage() {
         </section>
 
         <section
-          id="newsletter"
+          id="printing"
           data-reveal
           className="reveal-section mx-auto mt-18 w-full max-w-[1440px] px-4 sm:px-6 lg:px-8"
         >
@@ -356,26 +355,32 @@ export default function HomePage() {
             <div aria-hidden="true" className="dots-divider absolute inset-x-0 top-0 h-5" />
             <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
               <div>
-                <p className="font-script text-3xl text-[color:var(--accent-strong)]">{homeContent.newsletter.scriptLead}</p>
+                <p className="font-script text-3xl text-[color:var(--accent-strong)]">{homeContent.printing.scriptLead}</p>
                 <h2 className="mt-2 font-display text-[clamp(2.6rem,6vw,5rem)] leading-[0.94] tracking-[-0.05em]">
-                  {homeContent.newsletter.title}
+                  {homeContent.printing.title}
                 </h2>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-[color:var(--page-ink)]/76 sm:text-base">
+                  {homeContent.printing.description}
+                </p>
               </div>
-              <form className="grid gap-4 rounded-[1.7rem] border-[2px] border-[color:var(--line)] bg-[color:var(--newsletter-card)] p-4 sm:p-5">
-                <label className="text-[0.68rem] font-black uppercase tracking-[0.28em] text-[color:var(--page-ink)]/66" htmlFor="email">{homeContent.newsletter.label}</label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder={homeContent.newsletter.placeholder}
-                  className="h-14 rounded-[1rem] border-[2px] border-[color:var(--line)] bg-[color:var(--input-bg)] px-4 text-base font-semibold text-[color:var(--page-ink)] outline-none placeholder:text-[color:var(--page-ink)]/40 focus:border-[color:var(--accent-strong)]"
-                />
-                <button
-                  type="submit"
+              <div className="grid gap-4 rounded-[1.7rem] border-[2px] border-[color:var(--line)] bg-[color:var(--newsletter-card)] p-4 sm:p-5">
+                <div className="grid gap-3">
+                  {homeContent.printing.details.map((detail) => (
+                    <div
+                      key={detail}
+                      className="rounded-[1rem] border-[2px] border-dashed border-[color:var(--line)] bg-white/35 px-4 py-3 text-sm font-semibold leading-6 text-[color:var(--page-ink)]/78"
+                    >
+                      {detail}
+                    </div>
+                  ))}
+                </div>
+                <a
+                  href={`mailto:${shop.email}?subject=${encodeURIComponent("Impresiones y fotocopias")}&body=${encodeURIComponent("Hola, les envío mis archivos para imprimir o fotocopiar.\n\nDetalles:\n- Cantidad:\n- Color o blanco y negro:\n- Tamaño:\n- Indicaciones extra:\n")}`}
                   className="newsletter-button inline-flex items-center justify-center rounded-[1rem] border-[3px] border-[color:var(--line)] bg-[color:var(--cta-bg)] px-6 py-4 text-sm font-black uppercase tracking-[0.2em] text-[color:var(--cta-ink)] shadow-[8px_8px_0_var(--shadow-strong)]"
                 >
-                  {homeContent.newsletter.button}
-                </button>
-              </form>
+                  {homeContent.printing.cta}
+                </a>
+              </div>
             </div>
           </div>
         </section>

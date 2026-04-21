@@ -10,7 +10,7 @@ export const shop = {
   instagramHandle: "giftshop",
   tiktokHandle: "giftshop",
   facebookPage: "giftshop",
-  email: "hola@giftshop.mx",
+  email: "giftshop+tg2700951@gmail.com",
   address: {
     street: "Av 5 851-849",
     neighborhood: "Hacienda los Morales 3er Sector",

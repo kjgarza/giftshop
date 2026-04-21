@@ -25,7 +25,7 @@ export const homeContent = {
     { href: "#featured", label: "Favoritos" },
     { href: "#about", label: "Nosotras" },
     { href: "#location", label: "Ubicación" },
-    { href: "#newsletter", label: "Boletín" },
+    { href: "#printing", label: "Impresiones" },
   ],
   themeOptions: [
     { value: "candy-bazaar", label: "Dulce" },
@@ -207,12 +207,17 @@ export const homeContent = {
     hoursEyebrow: "horario",
     directionsLabel: "Cómo llegar",
   },
-  newsletter: {
-    scriptLead: "cartitas desde el escritorio bonito",
-    title: "Únete para recibir novedades, combos lindos y chismecito papelero",
-    label: "correo para recibir ternuritas",
-    placeholder: "hola@mispapelitosbonitos.com",
-    button: "Mándenme lo bonito",
+  printing: {
+    scriptLead: "impresiones, copias y archivos listos",
+    title: "Envíanos tus adjuntos por correo para imprimir o sacar fotocopias",
+    description:
+      "Mándanos PDFs, fotos, guías, tareas o archivos de oficina y te ayudamos a dejarlos listos para imprimir o fotocopiar sin vueltas raras.",
+    details: [
+      "Adjunta tus archivos directamente en el correo.",
+      "Escribe cuántas copias necesitas y si van en color o blanco y negro.",
+      "Si quieres, agrega indicaciones de tamaño, acabado o engrapado.",
+    ],
+    cta: "Mandar archivos por correo",
   },
   footer: {
     name: "Gift Shop",
