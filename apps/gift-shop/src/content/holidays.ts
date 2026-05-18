@@ -116,7 +116,7 @@ export const holidays: Holiday[] = [
     image: "/hero/maestro.svg",
     headlineEs: "Gracias, maestra",
     subheadlineEs:
-      "Detalles pequeños con mensajes grandes. Envoltura lista para el salón.",
+      "Detalles pequeños con mensajes grandes. Envoltura lista para sorprender.",
     whatsappMessage:
       "¡Hola! Quiero un detalle para el Día del Maestro. ¿Tienen opciones listas?",
     window: (year) => windowBefore(year, 5, 15),

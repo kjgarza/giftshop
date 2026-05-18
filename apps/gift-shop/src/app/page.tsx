@@ -145,11 +145,11 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,10,18,0.02),rgba(16,10,18,0.32))]" />
                 <div className="absolute left-4 top-4 rotate-[-4deg] rounded-[1rem] border-[2px] border-[color:var(--line)] bg-[color:var(--page-bg)] px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.2em] shadow-[5px_5px_0_var(--shadow-soft)]">
-                  Promo de temporada
+                  {homeContent.hero.promoLabel}
                 </div>
                 <div className="absolute bottom-4 right-4 max-w-[18rem] rotate-[3deg] rounded-[1.2rem] border-[2px] border-[color:var(--line)] bg-[color:var(--card-pink)] px-4 py-3 shadow-[5px_5px_0_var(--shadow-soft)]">
                   <div id="hero-image-label" className="font-script text-2xl text-[color:var(--accent-strong)]">{hero.headlineEs}</div>
-                  <div className="mt-1 text-xs font-black uppercase tracking-[0.18em]"></div>
+                  <div className="mt-1 text-xs font-semibold leading-5 text-[color:var(--page-ink)]/78">{homeContent.hero.promoText}</div>
                 </div>
               </div>
             </div>
@@ -170,6 +170,7 @@ export default function HomePage() {
                     <div key={favorite.label} className={`rounded-[1.4rem] ${favorite.tone} p-4 text-center`}>
                       <div className="text-5xl">{favorite.emoji}</div>
                       <div className="mt-3 text-xs font-black uppercase tracking-[0.16em]">{favorite.label}</div>
+                      {favorite.description ? <div className="mt-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-[color:var(--page-ink)]/62">{favorite.description}</div> : null}
                     </div>
                   ))}
                 </div>
@@ -217,6 +218,11 @@ export default function HomePage() {
               </h2>
               <p className="max-w-md text-sm leading-7 text-[color:var(--page-ink)]/72">{homeContent.featured.description}</p>
             </div>
+          </div>
+          <div className="mt-4 flex flex-col gap-2">
+            {homeContent.featured.bodyCopy.map((paragraph) => (
+              <p key={paragraph} className="text-sm leading-7 text-[color:var(--page-ink)]/72">{paragraph}</p>
+            ))}
           </div>
 
           <div className="mt-8 grid auto-rows-[170px] grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
