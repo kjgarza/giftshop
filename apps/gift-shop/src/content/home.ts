@@ -42,7 +42,7 @@ export const homeContent = {
   hero: {
     eyebrow: "bazar de papelitos bonitos",
     locale: "Monterrey, N.L. • alma de mercado • tienda en línea",
-    scriptLead: "brillitos, listones y mini tesoros",
+    scriptLead: "brillitos, listones y mini tesoros que te harán sentir especial",
     titleMain: "Gift",
     titleAccent: "Shop",
     tagline: "Donde los sueños de papel se hacen realidad",
@@ -51,20 +51,22 @@ export const homeContent = {
     ctaLabel: "Explora la repisa feliz",
     ctaHref: "#featured",
     highlightLabel: "envolturas, notitas de amor y antojitos de escritorio",
+    promoLabel: "Promo de temporada",
+    promoText: "Al comprar un pequeño detalle para regalar, la envoltura al 35% de descuento.",
     featureChips: [
       { title: "precios chiquitos", detail: "desde €4", tone: "bg-[color:var(--card-blue)]", tilt: "rotate-[-3deg]" },
       { title: "tienda llenita", detail: "novedades cada semana", tone: "bg-[color:var(--card-peach)]", tilt: "rotate-[2deg]" },
-      { title: "listo para regalar", detail: "moños, tags y brillito", tone: "bg-[color:var(--card-mint)]", tilt: "rotate-[-1deg]" },
+      { title: "listo para regalar", detail: "moños, tags y brillito, bolsas, cajas y papel", tone: "bg-[color:var(--card-mint)]", tilt: "rotate-[-1deg]" },
     ],
     sideCards: {
       favoritesTitle: "favoritos de la tienda",
       favorites: [
-        { emoji: "🎀", label: "paredes de listón", tone: "bg-[color:var(--card-pink)]" },
-        { emoji: "🌈", label: "caos de color", tone: "bg-[color:var(--card-blue)]" },
+        { emoji: "🎀", label: "paredes de listón", description: "llenas — papel, bolsas, cajas, tarjeta", tone: "bg-[color:var(--card-pink)]" },
+        { emoji: "🌈", label: "caos de color", description: "en envoltura para regalar", tone: "bg-[color:var(--card-blue)]" },
       ],
       manifestoTitle: "Más es más",
       manifestoText:
-        "Estantes repletos, precios escritos a mano, texturas de papel y mini hallazgos escondidos entre piezas grandotas y llamativas.",
+        "Estantes repletos de tarjeta, texturas de papel y mini hallazgos escondidos entre bolsas y cajas grandotas y llamativas.",
       manifestoTags: ["energía de álbum", "corazón de mercado", "fiebre papelera"],
       bundleEyebrow: "combo de hoy",
       bundleTitle: "3 por 2",
@@ -84,6 +86,10 @@ export const homeContent = {
     title: "Productos estrella en una cuadrícula gloriosamente llenita",
     description:
       "Tarjetitas inclinadas, badges pegajosos, precios chiquitos y demasiadas razones para llevarte una cosita más.",
+    bodyCopy: [
+      "Bolsas, cajas, moños, papel y todo para envolver tus regalos bonito encuentras.",
+      "Todo lo que necesitas para hacer que tu regalo luzca increíble. 🎁",
+    ],
   },
   products: [
     {
