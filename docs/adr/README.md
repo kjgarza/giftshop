@@ -6,7 +6,7 @@ This directory contains Architecture Decision Records (ADRs) for Gift Shop.
 
 | ADR | Title | Status | Date |
 | --- | ----- | ------ | ---- |
-| [0001](0001-github-action-instagram-content-generation.md) | Generate Instagram campaign assets from holiday content with GitHub Actions | Proposed | 2026-04-21 |
+| [0001](0001-github-action-instagram-content-generation.md) | Generate Instagram campaign assets from holiday content with GitHub Actions | Accepted | 2026-04-21 |
 
 ## Statuses
 
