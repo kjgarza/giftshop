@@ -62,7 +62,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día de Reyes",
     nameEn: "Three Kings Day",
     type: "major",
-    image: "/hero/reyes.svg",
+    image: "/hero/reyes.png",
     headlineEs: "Regalos para los Reyes Magos",
     subheadlineEs:
       "Envoltura y detalles listos para la rosca. Pide por WhatsApp antes del 6 de enero.",
@@ -107,7 +107,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día de las Madres",
     nameEn: "Mother's Day",
     type: "major",
-    image: "/hero/madres.svg",
+    image: "/hero/madres.png",
     headlineEs: "Para la mejor mamá del mundo",
     subheadlineEs:
       "Envolturas con flores, tarjetas escritas a mano y regalos con alma.",
@@ -122,7 +122,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día del Maestro",
     nameEn: "Teacher's Day",
     type: "common",
-    image: "/hero/maestro.svg",
+    image: "/hero/maestro.png",
     headlineEs: "Gracias, maestra",
     subheadlineEs:
       "Detalles pequeños con mensajes grandes. Envoltura lista para el salón.",
@@ -137,7 +137,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día del Padre",
     nameEn: "Father's Day",
     type: "common",
-    image: "/hero/padre.svg",
+    image: "/hero/padre.png",
     headlineEs: "Un regalo para papá",
     subheadlineEs:
       "Papelería clásica, envolturas elegantes y tarjetas con estilo.",
@@ -155,7 +155,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día de los Abuelos",
     nameEn: "Grandparents' Day",
     type: "optional",
-    image: "/hero/abuelos.svg",
+    image: "/hero/abuelos.png",
     headlineEs: "Para los abuelos consentidores",
     subheadlineEs: "Detalles que se guardan para siempre.",
     socialMediaPost:
@@ -169,7 +169,7 @@ export const holidays: Holiday[] = [
     nameEs: "Día de Muertos",
     nameEn: "Day of the Dead",
     type: "cultural",
-    image: "/hero/muertos.svg",
+    image: "/hero/muertos.png",
     headlineEs: "Papel picado, cempasúchil y memoria",
     subheadlineEs:
       "Detalles para tu ofrenda y tarjetas para quienes ya no están.",
@@ -184,7 +184,7 @@ export const holidays: Holiday[] = [
     nameEs: "Nochebuena",
     nameEn: "Christmas Eve",
     type: "major",
-    image: "/hero/nochebuena.svg",
+    image: "/hero/nochebuena.png",
     headlineEs: "Envuelve la Nochebuena",
     subheadlineEs:
       "Papel, moños y tarjetas para la cena que nadie va a olvidar.",
@@ -199,7 +199,7 @@ export const holidays: Holiday[] = [
     nameEs: "Navidad",
     nameEn: "Christmas",
     type: "major",
-    image: "/hero/navidad.svg",
+    image: "/hero/navidad.png",
     headlineEs: "Feliz Navidad desde la papelería",
     subheadlineEs:
       "Regalos envueltos con paciencia, moños hechos a mano y detalles para todos.",
@@ -212,7 +212,7 @@ export const holidays: Holiday[] = [
 ]
 
 export const defaultHero = {
-  image: "/hero/default.svg",
+  image: "/hero/default.png",
   headlineEs: "Papel y regalos que dan alegria",
   subheadlineEs:
     "Todo lo que necesitas para que un regalo se sienta como un abrazo.",
