@@ -28,6 +28,7 @@ function productSpan(size: (typeof homeContent.products)[number]["size"]) {
 export default function HomePage() {
   const activeHoliday = getActiveHoliday(new Date())
   const hero = activeHoliday ?? defaultHero
+  const { sections } = homeContent
 
   useEffect(() => {
     const reveals = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"))
@@ -67,6 +68,7 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="relative z-10 pb-16">
+        {sections.hero && (
         <section id="hero" className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-4 pt-6 sm:px-6 lg:px-8 lg:pt-10">
           <div className="hero-ribbon stagger-in relative overflow-hidden">
             <div className="hero-ribbon-rail hero-ribbon-rail-top" />
@@ -176,16 +178,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="sticker-card -rotate-[2deg] bg-[color:var(--card-lilac)]">
-                <div className="font-script text-3xl text-[color:var(--accent-strong)]">{homeContent.hero.sideCards.manifestoTitle}</div>
-                <p className="mt-3 text-sm leading-7 text-[color:var(--page-ink)]/76">{homeContent.hero.sideCards.manifestoText}</p>
-                <div className="mt-4 flex flex-wrap gap-2 text-[0.64rem] font-black uppercase tracking-[0.2em]">
-                  {homeContent.hero.sideCards.manifestoTags.map((tag) => (
-                    <span key={tag} className="rounded-full bg-[color:var(--chip-bg)] px-3 py-2">{tag}</span>
-                  ))}
-                </div>
-              </div>
-
               <div className="sticker-card rotate-[1.5deg] bg-[color:var(--card-coral)] text-[color:var(--accent-ink)]">
                 <div className="text-[0.62rem] font-black uppercase tracking-[0.32em]">{homeContent.hero.sideCards.bundleEyebrow}</div>
                 <div className="mt-2 font-display text-4xl leading-none">{homeContent.hero.sideCards.bundleTitle}</div>
@@ -194,6 +186,7 @@ export default function HomePage() {
             </aside>
           </div>
         </section>
+        )}
 
         <section className="marquee-shell mt-8">
           <div className="marquee-track">
@@ -205,6 +198,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {sections.featured && (
         <section
           id="featured"
           data-reveal
@@ -250,7 +244,9 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+        )}
 
+        {sections.about && (
         <section
           id="about"
           data-reveal
@@ -275,10 +271,6 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="grid gap-4">
-                <div className="rounded-[1.4rem] bg-[color:var(--card-pink)] p-5">
-                  <div className="text-xs font-black uppercase tracking-[0.2em] text-[color:var(--page-ink)]/62">{homeContent.about.sideEyebrow}</div>
-                  <p className="mt-3 text-sm leading-7">{homeContent.about.sideBody}</p>
-                </div>
                 <div className="grid grid-cols-2 gap-4">
                   {homeContent.about.stats.map((stat) => (
                     <div key={stat.label} className={`rounded-[1.4rem] ${stat.tone} p-5 text-center`}>
@@ -291,7 +283,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        )}
 
+        {sections.location && (
         <section
           data-reveal
           className="reveal-section mx-auto mt-18 w-full max-w-[1440px] px-4 sm:px-6 lg:px-8"
@@ -351,7 +345,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        )}
 
+        {sections.printing && (
         <section
           id="printing"
           data-reveal
@@ -390,6 +386,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        )}
       </main>
 
       <footer className="relative z-10 mt-18 border-t-[3px] border-[color:var(--line)] bg-[color:var(--footer-bg)]">

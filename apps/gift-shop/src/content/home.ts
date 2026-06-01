@@ -16,16 +16,25 @@ export type HomeSocialLink = {
 }
 
 export const homeContent = {
+  // Toggle whole page sections on/off. Nav links auto-hide when their
+  // section is disabled (see navLinks `section` key + site-header filter).
+  sections: {
+    hero: true,
+    featured: false, // product grid — not in use
+    about: true,
+    location: true,
+    printing: true,
+  },
   brand: {
     name: "Gift Shop",
-    headerAccent: "dulces de papel y regalos con drama",
+    headerAccent: "Regalos y detalles que dan alegría",
     mobileThemePrompt: "elige tu estilo",
   },
   navLinks: [
-    { href: "#featured", label: "Favoritos" },
-    { href: "#about", label: "Nosotras" },
-    { href: "#location", label: "Ubicación" },
-    { href: "#printing", label: "Impresiones" },
+    { href: "#featured", label: "Favoritos", section: "featured" },
+    { href: "#about", label: "Nosotras", section: "about" },
+    { href: "#location", label: "Ubicación", section: "location" },
+    { href: "#printing", label: "Impresiones", section: "printing" },
   ],
   themeOptions: [
     { value: "candy-bazaar", label: "Dulce" },
@@ -40,52 +49,46 @@ export const homeContent = {
     { className: "floaty-star bottom-[10%] right-[6%]", symbol: "✦" },
   ],
   hero: {
-    eyebrow: "bazar de papelitos bonitos",
+    eyebrow: "tienda de regalos bonitos",
     locale: "Monterrey, N.L. • alma de mercado • tienda en línea",
-    scriptLead: "brillitos, listones y mini tesoros que te harán sentir especial",
+    scriptLead: "Mini tesoros que te harán sentir especial",
     titleMain: "Gift",
     titleAccent: "Shop",
-    tagline: "Donde los sueños de papel se hacen realidad",
+    tagline: "Donde cada regalo se vuelve inolvidable",
     description:
-      "Un rincón de colores dulces lleno de libretas, papel para envolver, plumas, dijes y todas esas cositas lindas que vuelven un escritorio, un regalo o una nota en algo inolvidable.",
+      "Un rincón de colores dulces lleno de regalos, detalles, accesorios y todas esas cositas lindas que vuelven una sorpresa, un agradecimiento o un cumpleaños en algo inolvidable.",
     ctaLabel: "Explora la repisa feliz",
     ctaHref: "#featured",
-    highlightLabel: "envolturas, notitas de amor y antojitos de escritorio",
+    highlightLabel: "regalos, envolturas y detalles para sorprender",
     promoLabel: "Promo de temporada",
-    promoText: "Al comprar un pequeño detalle para regalar, la envoltura al 35% de descuento.",
+    // promoText: "Al comprar un pequeño detalle para regalar, la envoltura al 35% de descuento.",
+    promoText: "",
     featureChips: [
-      { title: "precios chiquitos", detail: "desde €4", tone: "bg-[color:var(--card-blue)]", tilt: "rotate-[-3deg]" },
-      { title: "tienda llenita", detail: "novedades cada semana", tone: "bg-[color:var(--card-peach)]", tilt: "rotate-[2deg]" },
-      { title: "listo para regalar", detail: "moños, tags y brillito, bolsas, cajas y papel", tone: "bg-[color:var(--card-mint)]", tilt: "rotate-[-1deg]" },
+      { title: "novedades", detail: "cada semana", tone: "bg-[color:var(--card-peach)]", tilt: "rotate-[2deg]" },
+      { title: "listo para regalar", detail: "moños, tarjetas y envoltura", tone: "bg-[color:var(--card-mint)]", tilt: "rotate-[-1deg]" },
     ],
     sideCards: {
       favoritesTitle: "favoritos de la tienda",
       favorites: [
-        { emoji: "🎀", label: "paredes de listón", description: "llenas — papel, bolsas, cajas, tarjeta", tone: "bg-[color:var(--card-pink)]" },
-        { emoji: "🌈", label: "caos de color", description: "en envoltura para regalar", tone: "bg-[color:var(--card-blue)]" },
+        { emoji: "🎀", label: "envoltura", description: "papel, bolsas y cajas", tone: "bg-[color:var(--card-pink)]" },
+        { emoji: "🎁", label: "detalles", description: "para cada ocasión", tone: "bg-[color:var(--card-blue)]" },
       ],
-      manifestoTitle: "Más es más",
-      manifestoText:
-        "Estantes repletos de tarjeta, texturas de papel y mini hallazgos escondidos entre bolsas y cajas grandotas y llamativas.",
-      manifestoTags: ["energía de álbum", "corazón de mercado", "fiebre papelera"],
-      bundleEyebrow: "combo de hoy",
-      bundleTitle: "3 por 2",
-      bundleText: "tarjetas + stickers + mini charms para pluma",
+      bundleEyebrow: "listo para regalar",
+      bundleTitle: "En minutos",
+      bundleText: "moños, tarjetas y brillito para tu regalo",
     },
   },
   marqueeItems: [
-    "✏️ Tarjetas",
+    "🎁 Regalos",
     "Envolturas",
-    "Libretas",
-    "Plumas",
-    "Regalitos",
-    "Calcomanías ✂️",
+    "Detalles",
+    "Tarjetas",
   ],
   featured: {
     scriptLead: "nuestras mini obsesiones",
     title: "Productos estrella en una cuadrícula gloriosamente llenita",
     description:
-      "Tarjetitas inclinadas, badges pegajosos, precios chiquitos y demasiadas razones para llevarte una cosita más.",
+      "Tarjetitas inclinadas, badges pegajosos y demasiadas razones para llevarte una cosita más.",
     bodyCopy: [
       "Bolsas, cajas, moños, papel y todo para envolver tus regalos bonito encuentras.",
       "Todo lo que necesitas para hacer que tu regalo luzca increíble. 🎁",
@@ -190,15 +193,12 @@ export const homeContent = {
   ] satisfies HomeProduct[],
   about: {
     eyebrow: "sobre nosotras",
-    title: "Un bazar de papelito con alma de mercado",
+    title: "Una tienda de regalos con alma de mercado",
     body:
-      "Gift Shop nació como ese tipo de tienda donde el papel para envolver cuelga como banderitas de fiesta, las libretas se amontonan como pastelitos y cada etiqueta escrita a mano se siente personal. Mezclamos color juguetón con objetos de papel llenos de textura para que cada regalo y cada rincón del escritorio tenga más alegría.",
+      "Gift Shop es ese tipo de tienda donde cada etiqueta escrita a mano se siente personal y siempre hay un detalle que no viste al entrar. Color juguetón y regalos con textura para que cada sorpresa tenga más alegría.",
     quote:
       "“Cada repisa debería sentirse como una búsqueda del tesoro.”",
     quoteNote: "regla sagrada de la casa",
-    sideEyebrow: "por qué la gente se tarda tanto",
-    sideBody:
-      "Porque siempre aparece una pluma más, una tarjeta más, otro carrete de listón y una cosita brillante que no viste al entrar.",
     stats: [
       { value: "120+", label: "pequeños antojos", tone: "bg-[color:var(--card-mint)]" },
       { value: "7", label: "días de tentación", tone: "bg-[color:var(--card-yellow)]" },
@@ -206,30 +206,31 @@ export const homeContent = {
   },
   location: {
     eyebrow: "ven a darnos una vuelta",
-    title: "Encuéntranos entre listones, papelitos y regalos apapachados",
-    description:
-      "Tenemos mostrador, mesitas llenas de detalles y una pared entera de cositas lindas para envolver. Pasa por tus favoritos o llega con tiempo para curiosear.",
+    title: "Encuéntranos entre listones y regalos apapachados",
+    // description:
+    //   "Tenemos mostrador, mesitas llenas de detalles y una pared entera de cositas lindas para envolver. Pasa por tus favoritos o llega con tiempo para curiosear.",
+    description: "",
     addressEyebrow: "dirección",
     hoursEyebrow: "horario",
     directionsLabel: "Cómo llegar",
   },
   printing: {
-    scriptLead: "impresiones, copias y archivos listos",
-    title: "Envíanos tus adjuntos por correo para imprimir o sacar fotocopias",
+    scriptLead: "impresiones y copias",
+    title: "Envíanos tus archivos y los dejamos listos",
     description:
-      "Mándanos PDFs, fotos, guías, tareas o archivos de oficina y te ayudamos a dejarlos listos para imprimir o fotocopiar sin vueltas raras.",
+      "Mándanos PDFs, fotos o documentos por correo y los imprimimos o fotocopiamos por ti.",
     details: [
-      "Adjunta tus archivos directamente en el correo.",
-      "Escribe cuántas copias necesitas y si van en color o blanco y negro.",
-      "Si quieres, agrega indicaciones de tamaño, acabado o engrapado.",
+      "Adjunta los archivos al correo.",
+      "Dinos cantidad y si van a color o blanco y negro.",
+      "Agrega tamaño, acabado o engrapado si aplica.",
     ],
-    cta: "Mandar archivos por correo",
+    cta: "Enviar por correo",
   },
   footer: {
     name: "Gift Shop",
-    tagline: "Donde los sueños de papel se hacen realidad, con color y con cariño.",
+    tagline: "Donde cada regalo se vuelve inolvidable, con color y con cariño.",
     socialLinks: [
-      { label: "IG", href: "https://instagram.com", color: "bg-[color:var(--card-pink)]" },
+      { label: "IG", href: "https://www.instagram.com/gift_shopmty", color: "bg-[color:var(--card-pink)]" },
       { label: "TT", href: "https://tiktok.com", color: "bg-[color:var(--card-lilac)]" },
       { label: "PI", href: "https://pinterest.com", color: "bg-[color:var(--card-yellow)]" },
       { label: "WA", href: "https://wa.me", color: "bg-[color:var(--card-mint)]" },

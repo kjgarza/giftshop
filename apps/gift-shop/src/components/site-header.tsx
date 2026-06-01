@@ -8,6 +8,7 @@ export function SiteHeader() {
   const [mounted, setMounted] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
+  const navLinks = homeContent.navLinks.filter((link) => homeContent.sections[link.section])
 
   useEffect(() => {
     setMounted(true)
@@ -29,7 +30,7 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-6 lg:flex">
             <nav className="flex items-center gap-5">
-              {homeContent.navLinks.map((link) => (
+              {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -86,7 +87,7 @@ export function SiteHeader() {
           <div className="min-h-0">
             <div className="rounded-[1.5rem] border-[2px] border-[color:var(--line)] bg-[color:var(--menu-bg)] p-4">
               <nav className="grid gap-3">
-                {homeContent.navLinks.map((link) => (
+                {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
