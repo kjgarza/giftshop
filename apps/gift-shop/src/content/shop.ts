@@ -5,7 +5,7 @@ export type BusinessHours = {
 
 export const shop = {
   name: "Gift Shop",
-  tagline: "Papelería y envoltura con cariño",
+  tagline: "Papel y regalos que da alegria",
   whatsappNumber: "528126337674",
   instagramHandle: "giftshop",
   tiktokHandle: "giftshop",
@@ -26,7 +26,7 @@ export const shop = {
     "https://www.google.com/maps?q=Av+5+851-849,+Hacienda+los+Morales+3er+Sector,+66495+Monterrey,+N.L.,+Mexico&output=embed",
   mapDirectionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=Av+5+851-849,+Hacienda+los+Morales+3er+Sector,+66495+Monterrey,+N.L.,+Mexico",
-  instagramUrl: "https://www.instagram.com/giftshop",
+  instagramUrl: "https://www.instagram.com/gift_shopmty",
   tiktokUrl: "https://www.tiktok.com/@giftshop",
   facebookUrl: "https://www.facebook.com/giftshop",
 } as const

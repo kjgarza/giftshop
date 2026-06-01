@@ -213,7 +213,7 @@ export const holidays: Holiday[] = [
 
 export const defaultHero = {
   image: "/hero/default.svg",
-  headlineEs: "Papelería y envoltura con cariño",
+  headlineEs: "Papel y regalos que dan alegria",
   subheadlineEs:
     "Todo lo que necesitas para que un regalo se sienta como un abrazo.",
   whatsappMessage: "¡Hola! Me gustaría preguntar por sus servicios.",

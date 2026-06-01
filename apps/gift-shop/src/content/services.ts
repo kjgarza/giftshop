@@ -8,13 +8,13 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: "papeleria",
-    title: "Papelería",
+    id: "regalos",
+    title: "Regalos",
     description:
-      "Cuadernos, libretas, plumas, stickers y todo lo que despierta la cabeza.",
+      "Regalos listos para sorprender, desde libretas y papelería hasta detalles únicos para cada ocasión.",
     icon: "tag",
     whatsappMessage:
-      "¡Hola! Me interesa ver qué tienen en papelería. ¿Me pueden mandar fotos?",
+      "¡Hola! Me interesa ver qué tienen en regalos. ¿Me pueden mandar fotos?",
   },
   {
     id: "impresion",

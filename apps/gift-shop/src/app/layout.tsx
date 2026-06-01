@@ -15,10 +15,9 @@ export const metadata: Metadata = {
     template: "%s | Gift Shop",
   },
   description:
-    "Gift Shop es una papelería de colores dulces llena de libretas, envolturas, tarjetas, calcomanías y tesoritos de escritorio.",
+    "Gift Shop es una tienda de regalos de colores dulces llena de libretas, envolturas, tarjetas, calcomanías y tesoritos de escritorio.",
   keywords: [
     "gift shop",
-    "papelería",
     "libretas",
     "papel para envolver",
     "calcomanías",
