@@ -74,18 +74,18 @@ export default function HomePage() {
             <div className="hero-ribbon-rail hero-ribbon-rail-top" />
             <div className="hero-ribbon-rail hero-ribbon-rail-bottom" />
             <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="relative z-10 px-5 pb-12 pt-14 sm:px-8 lg:px-10 lg:pb-14">
+              <div className="relative z-10 px-5 pb-8 pt-8 sm:px-8 sm:pb-12 sm:pt-14 lg:px-10 lg:pb-14">
                 <div className="flex flex-wrap items-center gap-3 text-[0.64rem] font-black uppercase tracking-[0.28em] text-[color:var(--page-ink)]/66">
                   <span className="rounded-full border-[2px] border-[color:var(--line)] bg-[color:var(--chip-bg)] px-4 py-2">
                     {homeContent.hero.eyebrow}
                   </span>
-                  <span id="hero-holiday-badge" className="rounded-full border-[2px] border-[color:var(--line)] bg-[color:var(--card-yellow)] px-4 py-2">
+                  <span id="hero-holiday-badge" className="hidden rounded-full border-[2px] border-[color:var(--line)] bg-[color:var(--card-yellow)] px-4 py-2 sm:inline-block">
                     {activeHoliday?.nameEs ?? "Siempre hay algo bonito que envolver"}
                   </span>
                 </div>
 
                 <div className="mt-6 max-w-3xl">
-                  <p className="font-script text-3xl text-[color:var(--accent-strong)] sm:text-4xl">{homeContent.hero.scriptLead}</p>
+                  <p className="hidden font-script text-3xl text-[color:var(--accent-strong)] sm:block sm:text-4xl">{homeContent.hero.scriptLead}</p>
                   <h1 className="mt-2 font-display text-[clamp(3.1rem,10vw,7.2rem)] leading-[0.88] tracking-[-0.05em] text-[color:var(--page-ink)]">
                     {homeContent.brand.name}
                   </h1>
@@ -93,7 +93,7 @@ export default function HomePage() {
                   <h2 id="hero-title" className="mt-6 max-w-3xl font-display text-[clamp(2.2rem,6vw,4.8rem)] leading-[0.95] tracking-[-0.05em] text-[color:var(--page-ink)]">
                     {hero.headlineEs}
                   </h2>
-                  <p id="hero-subheadline" className="mt-4 max-w-2xl text-sm leading-7 text-[color:var(--page-ink)]/76 sm:text-base">
+                  <p id="hero-subheadline" className="mt-4 hidden max-w-2xl text-sm leading-7 text-[color:var(--page-ink)]/76 sm:block sm:text-base">
                     {hero.subheadlineEs}
                   </p>
                   <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -115,7 +115,7 @@ export default function HomePage() {
                       Cómo llegar
                     </a>
                   </div>
-                  <div className="mt-7 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--page-ink)]/65">
+                  <div className="mt-7 hidden items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--page-ink)]/65 sm:flex">
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-[color:var(--line)] bg-[color:var(--card-yellow)]">
                       ★
                     </span>
@@ -123,7 +123,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                <div className="mt-8 hidden gap-3 sm:grid sm:grid-cols-3">
                   {homeContent.hero.featureChips.map((chip) => (
                     <div
                       key={`${chip.title}-${chip.detail}`}

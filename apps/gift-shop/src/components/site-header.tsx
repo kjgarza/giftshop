@@ -1,8 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { useTheme } from "next-themes"
 import { homeContent } from "@/content/home"
+import { withBasePath } from "@/lib/base-path"
 
 export function SiteHeader() {
   const [mounted, setMounted] = useState(false)
@@ -19,8 +21,15 @@ export function SiteHeader() {
       <div className="mx-auto w-full max-w-[1440px] rounded-[1.75rem] border-[3px] border-[color:var(--line)] bg-[color:var(--header-bg)]/92 px-4 py-3 shadow-[8px_8px_0_var(--shadow-soft)] backdrop-blur-md sm:px-5">
         <div className="flex items-center justify-between gap-4">
           <a href="/" className="flex min-w-0 items-center gap-3">
-            <div className="grid h-12 w-12 place-items-center rounded-[1rem] border-[2px] border-[color:var(--line)] bg-[color:var(--card-pink)] text-2xl shadow-[4px_4px_0_var(--shadow-soft)]">
-              ✿
+            <div className="grid h-12 w-12 place-items-center overflow-hidden rounded-[1rem] border-[2px] border-[color:var(--line)] bg-[color:var(--card-pink)] shadow-[4px_4px_0_var(--shadow-soft)]">
+              <Image
+                src={withBasePath("/logo/brand.jpg")}
+                alt={homeContent.brand.name}
+                width={48}
+                height={48}
+                className="h-full w-full object-cover"
+                priority
+              />
             </div>
             <div className="min-w-0">
               <div className="truncate font-display text-[1.55rem] leading-none tracking-[-0.05em]">{homeContent.brand.name}</div>
